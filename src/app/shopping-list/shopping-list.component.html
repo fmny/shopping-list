@@ -14,8 +14,11 @@
             *ngFor="let ingredient of ingredients; let i = index"
             (click)="selectedIngredientIndex = i"
             [class.active]="i === selectedIngredientIndex"
+            [class.odd]="i % 2 !== 0"
+            
             >{{ingredient.name}}  ({{ingredient.amount}})
             </a>
         </ul>
     </div>
 </div>
+
